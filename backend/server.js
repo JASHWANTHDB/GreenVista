@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://green-vista-one.vercel.app/',
+  origin: process.env.CLIENT_URL || 'https://greenvista-one.vercel.app',
   credentials: true
 }));
 app.use(express.json());
