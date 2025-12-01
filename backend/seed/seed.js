@@ -79,7 +79,7 @@ const seedDatabase = async () => {
       ownerId: owner1._id,
       type: 'Plumbing',
       details: 'Leaking faucet in kitchen',
-      status: 'open',
+      status: 'pending',
       images: []
     });
 
