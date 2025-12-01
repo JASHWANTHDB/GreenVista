@@ -1,7 +1,7 @@
 {
-  "buildCommand": "npx vite build",
+  "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install --force",
+  "installCommand": "npm ci",
   "env": {
     "VITE_API_URL": "https://greenvista-1.onrender.com/api"
   }
