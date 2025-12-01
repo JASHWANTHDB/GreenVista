@@ -154,23 +154,67 @@ Once deployed:
 
 ---
 
-## Part 4: Final Configuration
+## Part 4: Final Configuration - Update Render with Vercel Frontend URL
 
-### Update Backend Client URL
+### Step 1: Get Your Vercel Frontend URL
 
-1. Go back to [Render Dashboard](https://dashboard.render.com)
-2. Select your **greenvista-backend** service
-3. Go to **Settings** → **Environment**
-4. Update **CLIENT_URL** to your Vercel frontend URL
-5. Click **"Save"** and Render will auto-redeploy
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+2. Click on your **GreenVista** project
+3. At the top, you'll see your deployment URL (e.g., `https://greenvista-xyz.vercel.app`)
+4. **Copy this URL** - you'll need it
+
+### Step 2: Update Backend Environment Variable
+
+1. Go to [Render Dashboard](https://dashboard.render.com)
+2. Click your **greenvista-backend** service
+3. Click **"Environment"** in the left menu
+4. Find the **CLIENT_URL** environment variable
+5. Click **"Edit"** on that variable
+6. **Replace the value** with your Vercel frontend URL (from Step 1)
+7. Click **"Save"**
+8. Render will automatically redeploy your backend
+
+### Step 3: Verify Deployment
+
+1. Wait for Render to finish redeploying (check the **Logs** tab)
+2. Go back to your Vercel frontend URL and refresh the page
+3. Test logging in and using the application
 
 ### Verify Everything Works
 
-1. Visit your Vercel frontend URL
-2. Try logging in with admin/owner credentials
-3. Test creating/viewing service requests
-4. Check that images and data load correctly
-5. Open browser DevTools Console to check for errors
+**After updating CLIENT_URL on Render:**
+
+1. Visit your **Vercel frontend URL** (from Part 3, Step 4)
+2. You should see the login page
+3. Try logging in with your credentials:
+   - Admin account: `admin@example.com` / `admin123`
+   - Owner account: `owner@example.com` / `owner123`
+4. Test these features:
+   - ✅ View dashboard with data
+   - ✅ Create a new service request
+   - ✅ View invoices
+   - ✅ View notices
+   - ✅ Upload and view files
+5. Open **Browser DevTools** (F12) and check **Console** for any errors
+6. If you see any errors, check the **Network** tab to verify API calls to backend
+
+---
+
+## Deployment URLs Summary
+
+After completing all steps, you should have:
+
+| Component | URL | Where to Find |
+|-----------|-----|---------------|
+| **Frontend** | https://greenvista-xyz.vercel.app | Vercel Dashboard → Project URL |
+| **Backend API** | https://greenvista-backend.onrender.com | Render Dashboard → Service URL |
+| **Database** | MongoDB Atlas Cloud | Your cluster connection string |
+
+### Key Configuration Files
+
+- **Frontend config**: `frontend/vercel.json` - Build and environment settings
+- **Backend config**: `backend/config/db.js` - Database connection settings
+- **Environment Variables** (Render): Check your service settings for all env vars
 
 ---
 
