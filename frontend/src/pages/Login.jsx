@@ -78,7 +78,15 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '60vh',
-    padding: '20px'
+    padding: '20px',
+    '@media (maxWidth: 768px)': {
+      padding: '15px',
+      minHeight: '50vh'
+    },
+    '@media (maxWidth: 480px)': {
+      padding: '10px',
+      minHeight: '40vh'
+    }
   },
   card: {
     backgroundColor: 'white',
@@ -86,36 +94,66 @@ const styles = {
     borderRadius: '8px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
     maxWidth: '400px',
-    width: '100%'
+    width: '100%',
+    '@media (maxWidth: 768px)': {
+      padding: '30px',
+      maxWidth: '100%'
+    },
+    '@media (maxWidth: 480px)': {
+      padding: '20px',
+      borderRadius: '6px'
+    }
   },
   title: {
     marginBottom: '10px',
-    color: '#2c3e50'
+    color: '#2c3e50',
+    fontSize: '28px',
+    '@media (maxWidth: 480px)': {
+      fontSize: '24px',
+      marginBottom: '8px'
+    }
   },
   subtitle: {
     fontSize: '14px',
     color: '#7f8c8d',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    '@media (maxWidth: 480px)': {
+      fontSize: '12px',
+      marginBottom: '15px'
+    }
   },
   error: {
     backgroundColor: '#e74c3c',
     color: 'white',
     padding: '12px',
     borderRadius: '4px',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    fontSize: '14px',
+    '@media (maxWidth: 480px)': {
+      padding: '10px',
+      fontSize: '13px',
+      marginBottom: '15px'
+    }
   },
   form: {
     marginBottom: '20px'
   },
   formGroup: {
-    marginBottom: '20px'
+    marginBottom: '20px',
+    '@media (maxWidth: 480px)': {
+      marginBottom: '15px'
+    }
   },
   label: {
     display: 'block',
     marginBottom: '8px',
     fontSize: '14px',
     fontWeight: '500',
-    color: '#2c3e50'
+    color: '#2c3e50',
+    '@media (maxWidth: 480px)': {
+      fontSize: '13px',
+      marginBottom: '6px'
+    }
   },
   input: {
     width: '100%',
@@ -123,7 +161,11 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '4px',
     fontSize: '14px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    '@media (maxWidth: 480px)': {
+      padding: '12px',
+      fontSize: '16px'
+    }
   },
   button: {
     width: '100%',
@@ -134,14 +176,24 @@ const styles = {
     borderRadius: '4px',
     fontSize: '16px',
     cursor: 'pointer',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    transition: 'background-color 0.3s ease',
+    '@media (maxWidth: 480px)': {
+      padding: '14px',
+      fontSize: '15px'
+    }
   },
   contactInfo: {
     backgroundColor: '#ecf0f1',
     padding: '15px',
     borderRadius: '4px',
     fontSize: '12px',
-    color: '#2c3e50'
+    color: '#2c3e50',
+    '@media (maxWidth: 480px)': {
+      padding: '12px',
+      fontSize: '11px',
+      lineHeight: '1.6'
+    }
   }
 };
 

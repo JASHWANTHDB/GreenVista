@@ -183,7 +183,16 @@ const styles = {
     alignItems: 'center',
     minHeight: '100vh',
     padding: '20px',
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#f5f5f5',
+    '@media (maxWidth: 768px)': {
+      padding: '15px',
+      minHeight: 'auto',
+      paddingTop: '20px',
+      paddingBottom: '20px'
+    },
+    '@media (maxWidth: 480px)': {
+      padding: '10px'
+    }
   },
   card: {
     backgroundColor: 'white',
@@ -191,37 +200,68 @@ const styles = {
     borderRadius: '8px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
     maxWidth: '500px',
-    width: '100%'
+    width: '100%',
+    '@media (maxWidth: 768px)': {
+      padding: '30px',
+      borderRadius: '6px'
+    },
+    '@media (maxWidth: 480px)': {
+      padding: '20px',
+      borderRadius: '6px'
+    }
   },
   title: {
     marginBottom: '10px',
     color: '#2c3e50',
-    fontSize: '24px'
+    fontSize: '24px',
+    '@media (maxWidth: 768px)': {
+      fontSize: '22px'
+    },
+    '@media (maxWidth: 480px)': {
+      fontSize: '20px',
+      marginBottom: '8px'
+    }
   },
   subtitle: {
     fontSize: '14px',
     color: '#7f8c8d',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    '@media (maxWidth: 480px)': {
+      fontSize: '12px',
+      marginBottom: '15px'
+    }
   },
   error: {
     backgroundColor: '#e74c3c',
     color: 'white',
     padding: '12px',
     borderRadius: '4px',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    fontSize: '14px',
+    '@media (maxWidth: 480px)': {
+      padding: '10px',
+      fontSize: '13px',
+      marginBottom: '15px'
+    }
   },
   form: {
     marginBottom: '20px'
   },
   formGroup: {
-    marginBottom: '15px'
+    marginBottom: '15px',
+    '@media (maxWidth: 480px)': {
+      marginBottom: '12px'
+    }
   },
   label: {
     display: 'block',
     marginBottom: '5px',
     fontSize: '14px',
     fontWeight: '500',
-    color: '#2c3e50'
+    color: '#2c3e50',
+    '@media (maxWidth: 480px)': {
+      fontSize: '13px'
+    }
   },
   input: {
     width: '100%',
@@ -229,7 +269,11 @@ const styles = {
     border: '1px solid #ddd',
     borderRadius: '4px',
     fontSize: '14px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    '@media (maxWidth: 480px)': {
+      padding: '12px',
+      fontSize: '16px'
+    }
   },
   button: {
     width: '100%',
@@ -240,17 +284,26 @@ const styles = {
     borderRadius: '4px',
     fontSize: '16px',
     cursor: 'pointer',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    transition: 'background-color 0.3s ease',
+    '@media (maxWidth: 480px)': {
+      padding: '14px',
+      fontSize: '15px'
+    }
   },
   loginLink: {
     textAlign: 'center',
     fontSize: '14px',
-    color: '#7f8c8d'
+    color: '#7f8c8d',
+    '@media (maxWidth: 480px)': {
+      fontSize: '12px'
+    }
   },
   link: {
     color: '#27ae60',
     textDecoration: 'none',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    transition: 'color 0.3s ease'
   }
 };
 
