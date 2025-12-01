@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm --prefix frontend run build",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "frontend/dist",
   "env": {
     "VITE_API_URL": "https://greenvista-1.onrender.com"
