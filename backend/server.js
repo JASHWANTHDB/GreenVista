@@ -7,7 +7,20 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://greenvista-one.vercel.app',
+  origin: function(origin, callback) {
+    const allowedOrigins = [
+      process.env.CLIENT_URL,
+      'https://greenvista-one.vercel.app',
+      'https://green-vista-one.vercel.app',
+      'http://localhost:5173'
+    ];
+    
+    if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes(origin.replace(/\/$/, ''))) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 app.use(express.json());
